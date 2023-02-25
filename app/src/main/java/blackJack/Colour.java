@@ -5,5 +5,6 @@ public enum Colour {
     Spades,
     Clubs,
     Diamonds,
-    
+    Count,
+    Hidden,    
 }
