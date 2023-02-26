@@ -7,6 +7,7 @@ public class BlackJackMain {
         Player p = new Player();
 
         System.out.println("Welcome to the Black Jack Game");
+        d.play(p);
     }
     
 }

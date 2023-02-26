@@ -66,6 +66,8 @@ public class Dealer {
 
     private void dealCardTo(Player player) {
         Card c = deck.getTopCard();
+        c.show();
+        player.addCard(c);
     }
 
     private void dealCardTo() {
@@ -76,7 +78,7 @@ public class Dealer {
 
     private void playersTurn(Player player) {
         while(player.wantsToHit()) {
-            dealCardTo();
+            dealCardTo(player);
             System.out.println("Player hits\n" + player);
         }
     }

@@ -5,9 +5,9 @@ public class Card {
     private Value value;
     private boolean isHidden;
 
-    public Card(Colour color, Value value) {
-        this.color = color;
-        this.value = value;
+    public Card(Colour c, Value v) {
+        color = c;
+        value = v;
         isHidden = true;
     }
 
@@ -23,19 +23,19 @@ public class Card {
         if (isHidden) {
             return Colour.Hidden;
         }
-        return this.color;
+        return color;
     }
 
     public Value getValue() {
         if (isHidden) {
             return Value.Hidden;
         }
-        return this.value;
+        return value;
     }
 
     @Override
     public String toString() {
-        return  getColour() + " of " + getValue();
+        return  getValue() + " of " + getColour();
     }
     
 }

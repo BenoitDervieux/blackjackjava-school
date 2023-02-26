@@ -6,11 +6,12 @@ public class Deck {
     private ArrayList<Card> cards;
 
     public Deck() {
+        cards = new ArrayList<Card>();
+
         for (int coulourIndex = 0; coulourIndex < Colour.Count.ordinal(); coulourIndex++) {
             for (int valueIndex = 0; valueIndex < Value.Count.ordinal(); valueIndex++) {
                 Card c = new Card(Colour.values()[coulourIndex], Value.values()[valueIndex]);
                 cards.add(c);
-
             }
         }
     }
